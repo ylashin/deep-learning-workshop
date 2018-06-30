@@ -41,6 +41,7 @@ We can verify serving is running fine by : `telnet localhost 7000`
 
 ## Complete the draft application to consume the running model and do predictions
 
+Open `TheApp.sln` from **Prediction** folder inside Sample2
 
 Install nuget packages:
 * Google.Protobuf
@@ -49,8 +50,9 @@ Install nuget packages:
 * NewtonSoft.Json
 
 
-Powershell from : packages\Grpc.Tools.1.12.0\tools\windows_x64
+Open a Powershell from : packages\Grpc.Tools.1.12.0\tools\windows_x64 and run the following:
 
+```
 wget https://raw.githubusercontent.com/krystianity/keras-serving/master/node_server/protos/model.proto -OutFile .\model.proto
 wget https://raw.githubusercontent.com/krystianity/keras-serving/master/node_server/protos/prediction_service.proto -OutFile .\prediction_service.proto
 wget https://raw.githubusercontent.com/krystianity/keras-serving/master/node_server/protos/predict.proto -OutFile .\predict.proto
@@ -59,11 +61,22 @@ wget https://raw.githubusercontent.com/krystianity/keras-serving/master/node_ser
 wget https://raw.githubusercontent.com/krystianity/keras-serving/master/node_server/protos/tensor.proto -OutFile .\tensor.proto
 wget https://raw.githubusercontent.com/krystianity/keras-serving/master/node_server/protos/tensor_shape.proto -OutFile .\tensor_shape.proto
 
-
+mkdir Temp
 
 .\protoc.exe "types.proto" "tensor.proto" "tensor_shape.proto" "prediction_service.proto" `
     "predict.proto" "model.proto" "resource_handle.proto"   `
-    --csharp_out "C:\Temp" --grpc_out "C:\Temp" --plugin=protoc-gen-grpc=.\grpc_csharp_plugin.exe
+    --csharp_out ".\Temp" --grpc_out ".\Temp" --plugin=protoc-gen-grpc=.\grpc_csharp_plugin.exe
+
+```
 
 
-docker commit a357a4d7dc6b  ylashin/tensorflow-serving
+Copy all the `.cs` files generated in Temp folder from the final statement in the above snippet and put them in a folder in `TheApp` project
+
+Compile and complete the application, mainly adding prediction button handler code:
+
+```
+var model = new ServingModel();
+var kiwiProbability = model.PredictIdentity(float.Parse(txtAttribute1.Text), float.Parse(txtAttribute2.Text));
+lblKiwiPropability.Text = $"Kiwi : {kiwiProbability.ToString("p")}";
+lblAussiePropability.Text = $"Aussie : {(1- kiwiProbability).ToString("p")}";
+```

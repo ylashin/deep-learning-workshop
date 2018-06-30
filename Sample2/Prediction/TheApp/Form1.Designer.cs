@@ -42,7 +42,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::TheApp.Properties.Resources.aussie_vs__kiwi_by_kirasaintclair_d5xpudb;
-            this.pictureBox1.Location = new System.Drawing.Point(56, 194);
+            this.pictureBox1.Location = new System.Drawing.Point(55, 264);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1051, 572);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -53,7 +53,7 @@
             // 
             this.lblKiwiPropability.AutoSize = true;
             this.lblKiwiPropability.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKiwiPropability.Location = new System.Drawing.Point(1137, 287);
+            this.lblKiwiPropability.Location = new System.Drawing.Point(133, 194);
             this.lblKiwiPropability.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblKiwiPropability.Name = "lblKiwiPropability";
             this.lblKiwiPropability.Size = new System.Drawing.Size(106, 51);
@@ -64,7 +64,7 @@
             // 
             this.lblAussiePropability.AutoSize = true;
             this.lblAussiePropability.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAussiePropability.Location = new System.Drawing.Point(1137, 194);
+            this.lblAussiePropability.Location = new System.Drawing.Point(830, 194);
             this.lblAussiePropability.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblAussiePropability.Name = "lblAussiePropability";
             this.lblAussiePropability.Size = new System.Drawing.Size(159, 51);
@@ -116,12 +116,13 @@
             this.btnDetectIdentity.TabIndex = 16;
             this.btnDetectIdentity.Text = "Detect my identity";
             this.btnDetectIdentity.UseVisualStyleBackColor = true;
+            this.btnDetectIdentity.Click += new System.EventHandler(this.btnDetectIdentity_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1347, 775);
+            this.ClientSize = new System.Drawing.Size(1347, 866);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblKiwiPropability);
             this.Controls.Add(this.lblAussiePropability);

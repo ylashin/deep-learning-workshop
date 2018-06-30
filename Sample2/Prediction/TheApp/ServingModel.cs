@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Grpc.Core;
+using Newtonsoft.Json;
+using Tensorflow;
+using Tensorflow.Serving;
+using TheApp.ResponseSchema;
 
 namespace TheApp
 {
@@ -18,7 +18,7 @@ namespace TheApp
                 {
                     ModelSpec = new ModelSpec()
                     {
-                        Name = "ex2",
+                        Name = "Sample2",
                         Version = 1,
                         SignatureName = "Predict"
                     }
