@@ -1,0 +1,7 @@
+﻿var model = new InferenceLibrary.Model();
+
+var prediction = model.Predict(new[] {
+    new [] { float.Parse(txtAge.Text), float.Parse(txtNumChildren.Text) }
+});
+
+txtIncome.Text = prediction.First().First().ToString();

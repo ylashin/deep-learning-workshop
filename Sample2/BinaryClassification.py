@@ -45,7 +45,7 @@ model.compile(
 
 model.fit(X, Y, epochs=100, batch_size=100, verbose=1, validation_split=0.1)
     
-model.save("ex2.h5")
+model.save("Sample2.h5")
 
 
  # python .\utilities.py "D:\B2B\July-2018\Ex2-BasicClassification\ex2.hdf5" "D:\B2B\July-2018\Ex2-BasicClassification\serving"

@@ -4,8 +4,9 @@ Workshop material for getting familiar with deep learning concepts and how to in
 
 ## Environment setup
 
-* Visual Studio 
+* Visual Studio plus [VS Tools for AI extension](https://visualstudio.microsoft.com/downloads/ai-tools-vs/)
 * VS Code plus Python extension
+* Power BI Desktop : just to visualise some CSV data
 * Docker for windows with Ubuntu Containers
 * Run following to pull one image we will need
     
