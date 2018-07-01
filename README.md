@@ -2,28 +2,52 @@
 Workshop material for getting familiar with deep learning concepts and how to integrate it into applications.
 
 
-## Environment setup
+## Prerequisites & Environment Setup
 
-* Visual Studio plus [VS Tools for AI extension](https://visualstudio.microsoft.com/downloads/ai-tools-vs/)
-* VS Code plus Python extension
-* Power BI Desktop : just to visualise some CSV data
+* Some Azure credit in the range of AUD 20 or more for provisioning VM & Kuberenetes cluster.
+* NVIDIA GPU, I tested the setup on a GTX 770 just to confirm the easy samples will work on older cards. Heavier models will be trained on Azure VMs.
+* [NVIDIA Cuda Toolkit 9.0](https://developer.nvidia.com/cuda-90-download-archive), install Base Installer then all patches.
+* Download [NVIDIA cuDNN 7.1](https://developer.nvidia.com/cudnn), pick a version matching Cuda Toolkit 9.0 above. Run the first 4 steps of [this installation guide](https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#installwindows). No need for the 5th step about configuring linker in Visual Studio.
+
+    ![https://i.imgur.com/yqob1lK.png](https://i.imgur.com/yqob1lK.png)
+
+* Visual Studio (community edition or greater) with Python development workload selected
+
+    ![https://i.imgur.com/J5TOfQl.png](https://i.imgur.com/J5TOfQl.png)
+
+* Add Python install folder to your PATH variable. This folder will probably be located in `C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64`.
+* [VS Tools for AI extension](https://visualstudio.microsoft.com/downloads/ai-tools-vs/)
+* VS Code
+* Python extension for VS Code
+* Power BI Desktop just to visualise some CSV data
+* [Netron](https://github.com/lutzroeder/Netron) for network visualisation
 * Docker for windows with Ubuntu Containers
-* Run following to pull one image we will need
+* Run following to pull one docker image we will need
+
+    ```docker pull ylashin/tensorflow-serving```
     
-    `docker pull ylashin/tensorflow-serving`
-* Putty as sometimes gitbash does not work fine
-- VS Tools for AI + this contains a page for one click setup
-Preparing development environment
+* Putty as sometimes Git Bash does not work fine
+* Run the below PowerShell snippet to install needed libraries like Keras and TensorFlow (GPU enabled). Python should be available on system path variable. Some libraries are installed using specific versions as some examples we will try depend on VS tools that need those versions, more specifically ONNX which is a neural network interoperability library.
 
-From <https://github.com/Microsoft/vs-tools-for-ai/blob/master/docs/prepare-localmachine.md#preparing-development-environment> 
+    ```
+    python -m ensurepip
+    python -m pip install --upgrade pip    
+    python -m pip install tensorflow-gpu==1.5.0
+    python -m pip install keras==2.1.6
+    python -m pip install pandas
+    python -m pip install onnx==1.1.2
+    python -m pip install onnxmltools    
+    python -m pip install jupyter
+    python -m pip install matplotlib
+    ```
 
-Add python & its scripts folder location to PATH variable
-Install Netron for network visualisation : https://github.com/lutzroeder/Netron/releases/download/v1.8.6/Netron-Setup-1.8.6.exe
+* Confirm Keras & TensorFlow installed successfully by running the below PowerShell snipptet
 
+    ```
+    python -c "import tensorflow; print(tensorflow.__version__)"
+    python -c "import keras; print(keras.__version__)"
+    ```
 
-Install h5py , pydot and graphviz as it is not included in the above
-            python -m ensurepip
-            python -m pip install --upgrade pip
-    Python -m pip flickrapi
-    python -m pip install h5py
-    python -m pip install nltk
+* Clone repo `https://github.com/ylashin/deep-learning-workshop`
+
+    
