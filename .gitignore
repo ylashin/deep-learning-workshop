@@ -333,3 +333,4 @@ ASALocalRun/
 # Workshop ignored files
 Sample**/*.h5
 tf-serving**
+Sample10/outputs/**
