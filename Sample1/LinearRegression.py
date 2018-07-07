@@ -21,6 +21,3 @@ model.fit(X, Y, epochs=100, batch_size=10, verbose=1, validation_split=0.2)
 
     
 model.save("Sample1.h5")
-
-# preview the network on https://lutzroeder.github.io/Netron/ or use the Desktop app
-# Export to serving : python.exe ..\Tools\ConvertToServing.py  --model=.\Sample1.h5 --output=tf-serving
