@@ -1,0 +1,35 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: dvc-deployment
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: dvc-server
+    spec:
+      containers:
+      - name: dvc-container
+        image: ylashin/dvc23062018
+        command:
+        - /bin/sh
+        - -c
+        args:
+        - tensorflow_model_server --port=7000 --model_name=dogs-vs-cats --model_base_path=/dvc
+        ports:
+        - containerPort: 7000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    run: dvc-service
+  name: dvc-service
+spec:
+  ports:
+  - port: 7000
+    targetPort: 7000
+  selector:
+    app: dvc-server
+  type: LoadBalancer
