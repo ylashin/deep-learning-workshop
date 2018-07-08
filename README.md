@@ -65,7 +65,7 @@ Workshop material for getting familiar with deep learning concepts and how to in
 * Sample 3 : Convolutional networks and transfer learning + Consumer in Azure K8s
 * Sample 4 : Cognitive Services Custom Vision API
 * Sample 5 : Consume ready made models (ONNX)
-* Sample 6 : RNN for recommendations
+* Sample 6 : Embeddings for recommendations
 * SAmple 7 : RNN for NLP (predictive keyboard)
 * Sample 8 : Misc > Faster training via Cyclical Learning Rate Adaptation
 * Sample 9 : Misc > Faster training via multi-GPU training
