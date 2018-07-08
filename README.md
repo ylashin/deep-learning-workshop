@@ -55,6 +55,10 @@ Workshop material for getting familiar with deep learning concepts and how to in
     python -c "import keras; print(keras.__version__)"
     ```
 
+* Make sure you can create **NV24** Azure VM in South Central US region, if not create a support request to increase your quota. It will be auto approved.
+
+    ![https://i.imgur.com/SVUh0Ko.png](https://i.imgur.com/SVUh0Ko.png)
+
 * Clone repo `https://github.com/ylashin/deep-learning-workshop`
 
     
