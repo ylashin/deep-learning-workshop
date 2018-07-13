@@ -17,7 +17,7 @@ Workshop material for getting familiar with deep learning concepts and how to in
 
 * Set the default Python environment globally for Visual Studio specially if you have multiple Python installations. Go to menu Tools > Python > Python Environments and select e.g. Python 3.6 (64 bit) and click Make this the default environment for new projects button.
 
-    ![https://i.imgur.com/4cxxsXN.png](https://i.imgur.com/4cxxsXN.png)
+    ![https://i.imgur.com/d2nKqyC.png](https://i.imgur.com/d2nKqyC.png)
 
 * Add Python install folder to your PATH variable. This folder will probably be located in `C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64`.
 * [VS Tools for AI extension](https://visualstudio.microsoft.com/downloads/ai-tools-vs/)
@@ -55,7 +55,7 @@ Workshop material for getting familiar with deep learning concepts and how to in
     python -c "import keras; print(keras.__version__)"
     ```
 
-* Make sure you can create **NV24** Azure VM in South Central US region, if not create a support request to increase your quota. It will be auto approved.
+* Make sure you can create **NC24 or NV24** Azure VMs, if not create a support request to increase your quota. It will be auto approved.
 
     ![https://i.imgur.com/SVUh0Ko.png](https://i.imgur.com/SVUh0Ko.png)
 

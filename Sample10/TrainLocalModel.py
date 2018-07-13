@@ -1,5 +1,4 @@
 import pickle
-import sys
 import os
 import pandas
 import numpy as np
@@ -16,20 +15,20 @@ inputDf = pandas.read_csv('data.csv')
 X = inputDf[['Attr1', 'Attr2']].values
 Y = inputDf['Identity'].values
 
-# split data 65%-35% into training set and test set
-X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.35, random_state=0)
+# split data 70%-30% into training set and test set
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.3, random_state=0)
 
 # train a support vector machine model on the training set
-clf = SVC()
-clf.fit(X_train, Y_train) 
-print (clf)
+model = SVC()
+model.fit(X_train, Y_train) 
+print (model)
 
 # evaluate the test set
-accuracy = clf.score(X_test, Y_test)
+accuracy = model.score(X_test, Y_test)
 print ("Accuracy is {}".format(accuracy))
 
-# serialize the model on disk in the special 'outputs' folder
+# serialize the model on disk
 print ("Export the model to model.pkl")
 f = open('./outputs/model.pkl', 'wb')
-pickle.dump(clf, f)
+pickle.dump(model, f)
 f.close()
