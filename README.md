@@ -4,9 +4,9 @@ Workshop material for getting familiar with deep learning concepts and how to in
 
 ## Prerequisites & Environment Setup
 
-* Some Azure credit in the range of AUD 20 or more for provisioning VM & Kuberenetes cluster.
+* Some Azure credit in the range of AUD 20 or more for provisioning a VM & Kubernetes cluster.
 * NVIDIA GPU, I tested the setup on a GTX 770 just to confirm the easy samples will work on older cards. Heavier models will be trained on Azure VMs.
-* [NVIDIA Cuda Toolkit 9.0](https://developer.nvidia.com/cuda-90-download-archive), install Base Installer then all patches.
+* [NVIDIA Cuda Toolkit 9.0](https://developer.nvidia.com/cuda-90-download-archive), install base Installer then all patches.
 * Download [NVIDIA cuDNN 7.1](https://developer.nvidia.com/cudnn), pick a version matching Cuda Toolkit 9.0 above. Run the first 4 steps of [this installation guide](https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#installwindows). No need for the 5th step about configuring linker in Visual Studio.
 
     ![https://i.imgur.com/yqob1lK.png](https://i.imgur.com/yqob1lK.png)
@@ -17,7 +17,7 @@ Workshop material for getting familiar with deep learning concepts and how to in
 
 * Set the default Python environment globally for Visual Studio specially if you have multiple Python installations. Go to menu Tools > Python > Python Environments and select e.g. Python 3.6 (64 bit) and click Make this the default environment for new projects button.
 
-    ![https://i.imgur.com/d2nKqyC.png](https://i.imgur.com/d2nKqyC.png)
+    ![https://i.imgur.com/jXeCgwW.png](https://i.imgur.com/jXeCgwW.png)
 
 * Add Python install folder to your PATH variable. This folder will probably be located in `C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64`.
 * [VS Tools for AI extension](https://visualstudio.microsoft.com/downloads/ai-tools-vs/)
