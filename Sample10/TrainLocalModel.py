@@ -19,7 +19,7 @@ Y = inputDf['Identity'].values
 # split data 65%-35% into training set and test set
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.35, random_state=0)
 
-# train a logistic regression model on the training set
+# train a support vector machine model on the training set
 clf = SVC()
 clf.fit(X_train, Y_train) 
 print (clf)
