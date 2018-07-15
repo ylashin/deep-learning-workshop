@@ -20,11 +20,11 @@ Workshop material for getting familiar with deep learning concepts and how to in
     ![https://i.imgur.com/jXeCgwW.png](https://i.imgur.com/jXeCgwW.png)
 
 * Add Python install folder to your PATH variable. This folder will probably be located in `C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64`.
-* [VS Tools for AI extension](https://visualstudio.microsoft.com/downloads/ai-tools-vs/)
+* [Visual Studio Tools for AI](https://visualstudio.microsoft.com/downloads/ai-tools-vs/)
 * VS Code
 * Python extension for VS Code
-* Power BI Desktop just to visualise some CSV data
-* [Netron](https://github.com/lutzroeder/Netron) for network visualisation
+* Power BI Desktop, just to visualise some CSV data
+* [Netron](https://github.com/lutzroeder/Netron) for model visualisation
 * Docker for windows with Ubuntu Containers
 * Run following to pull one docker image we will need
 
@@ -32,7 +32,7 @@ Workshop material for getting familiar with deep learning concepts and how to in
     docker pull ylashin/tensorflow-serving
     ```
     
-* Putty as sometimes Git Bash does not work fine
+* Putty, as sometimes Git Bash does not work fine
 * Run the below PowerShell snippet to install needed libraries like Keras and TensorFlow (GPU enabled). Python should be available on system path variable. Some libraries are installed using specific versions as some examples we will try depend on VS tools that need those versions, more specifically ONNX which is a neural network interoperability library.
 
     ```
@@ -55,22 +55,24 @@ Workshop material for getting familiar with deep learning concepts and how to in
     python -c "import keras; print(keras.__version__)"
     ```
 
-* Make sure you can create **NC24 or NV24** Azure VMs, if not create a support request to increase your quota. It will be auto approved.
+    ![https://i.imgur.com/pkHxC4X.png](https://i.imgur.com/pkHxC4X.png)
+
+* Make sure you can create Azure VMs of size **NC24** or **NV24** , if not create a support request to increase your quota (basically increase core count to 24). It will be auto approved for those sizes.
 
     ![https://i.imgur.com/SVUh0Ko.png](https://i.imgur.com/SVUh0Ko.png)
 
 * Clone repo `https://github.com/ylashin/deep-learning-workshop`
 
-    
+
 ## Samples roadmap
 
 * Sample 1 : Intro to neural networks with linear regression + Consume using Microsoft.ML.Scoring
 * Sample 2 : Handling non linearities + Consume using TensorFlow serving in docker container
-* Sample 3 : Convolutional networks and transfer learning + Consumer in Azure K8s
+* Sample 3 : Convolutional networks and transfer learning + Consume in Azure K8s
 * Sample 4 : Cognitive Services Custom Vision API
 * Sample 5 : Consume ready made models (ONNX)
 * Sample 6 : Embeddings for recommendations
-* SAmple 7 : RNN for NLP (predictive keyboard)
+* Sample 7 : RNN for NLP (predictive keyboard)
 * Sample 8 : Misc > Faster training via Cyclical Learning Rate Adaptation
 * Sample 9 : Misc > Faster training via multi-GPU training
 * Sample 10 : Misc > Local traning and cloud inference on Azure ML
