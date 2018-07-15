@@ -1,5 +1,8 @@
 import keras
 import pandas as pd
+import numpy as np
+
+np.random.seed(12345)
 
 dataframe = pd.read_csv('data.csv')
 print(dataframe.head())
