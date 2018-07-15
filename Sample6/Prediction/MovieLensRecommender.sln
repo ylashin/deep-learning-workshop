@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieLensRecommender", "MovieLensRecommender\MovieLensRecommender.csproj", "{B1715491-F935-45B0-9583-04E5AA5FFE26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PosterCollector", "PosterCollector\PosterCollector.csproj", "{3B1CDD8D-37FB-46A4-9374-0A835518A1E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1715491-F935-45B0-9583-04E5AA5FFE26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1715491-F935-45B0-9583-04E5AA5FFE26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1715491-F935-45B0-9583-04E5AA5FFE26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1715491-F935-45B0-9583-04E5AA5FFE26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B1CDD8D-37FB-46A4-9374-0A835518A1E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B1CDD8D-37FB-46A4-9374-0A835518A1E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B1CDD8D-37FB-46A4-9374-0A835518A1E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B1CDD8D-37FB-46A4-9374-0A835518A1E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A929B05-D18E-42F9-A524-297E28C9AA69}
+	EndGlobalSection
+EndGlobal

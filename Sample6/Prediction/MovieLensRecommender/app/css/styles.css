@@ -1,0 +1,33 @@
+﻿.btn-margin {
+    margin-top: 7px
+}
+
+.loading {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+}
+
+a {
+    cursor: pointer;
+}
+
+
+.navbar-brand {
+    font-size: 3rem;
+}
+
+.navbar-header{
+    width : 100%;
+}
+
+h2{
+    margin-top: 0px;
+}

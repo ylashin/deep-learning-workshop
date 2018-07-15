@@ -1,0 +1,34 @@
+<h2>Movies</h2>
+<div>
+    <div class="row">
+        <label>Show users with at least </label><input type="number" ng-change="vm.activate()" ng-model="vm.minRatings" /> ratings
+        <br />
+
+        <label>Users : </label>
+        <select name="userSelect" id="userSelect" ng-model="vm.selectedUser" ng-change="vm.userChanged()">
+            <option ng-repeat="option in vm.users track by option.UserId" 
+                    ng-selected="vm.selectedUser == option.UserId"
+                    value="{{option.UserId}}">User {{option.UserId}}</option>
+        </select>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 square" ng-repeat="movie in vm.ratings">
+            <div class="card mt-4" style="width:100%;height:20rem;">
+                <img class="card-img-top img-fluid" style="width:100%;height:15rem;max-width:100%;max-height:100%" ng-src="{{'data/images/' + movie.MovieId + '.jpg'}}" />
+                <div class="card-body">
+                    {{movie.Title}}
+                    <div ng-if="movie.Rating > 0">
+                        <rating color="#FF0000" interactive="false" value="movie.Rating" max="5"></rating>
+                    </div>
+                    <div ng-if="!(movie.Rating > 0) && !movie.prediction">
+                        <a href="" ng-click="vm.predict(movie)">Predict Rating</a>
+                    </div>
+                    <div ng-if="movie.prediction">
+                        {{movie.prediction}}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
