@@ -32,7 +32,7 @@ Workshop material for getting familiar with deep learning concepts and how to in
     docker pull ylashin/tensorflow-serving
     ```
     
-* Putty, as sometimes Git Bash does not work fine
+* [Putty](https://www.putty.org/), as sometimes Git Bash does not work fine
 * Run the below PowerShell snippet to install needed libraries like Keras and TensorFlow (GPU enabled). Python should be available on system path variable. Some libraries are installed using specific versions as some examples we will try depend on VS tools that need those versions, more specifically ONNX which is a neural network interoperability library.
 
     ```

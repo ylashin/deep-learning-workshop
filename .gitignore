@@ -334,3 +334,4 @@ ASALocalRun/
 Sample**/*.h5
 tf-serving**
 Sample10/outputs/**
+Sample6/Prediction/MovieLensRecommender/data/movie-lens/**
