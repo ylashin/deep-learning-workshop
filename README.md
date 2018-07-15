@@ -9,15 +9,15 @@ Workshop material for getting familiar with deep learning concepts and how to in
 * [NVIDIA Cuda Toolkit 9.0](https://developer.nvidia.com/cuda-90-download-archive), install base Installer then all patches.
 * Download [NVIDIA cuDNN 7.1](https://developer.nvidia.com/cudnn), pick a version matching Cuda Toolkit 9.0 above. Run the first 4 steps of [this installation guide](https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#installwindows). No need for the 5th step about configuring linker in Visual Studio.
 
-    ![https://i.imgur.com/yqob1lK.png](https://i.imgur.com/yqob1lK.png)
+    ![cuDNN Download](https://i.imgur.com/yqob1lK.png)
 
 * Visual Studio 2017 (community edition or greater) with Python development workload selected
 
-    ![https://i.imgur.com/J5TOfQl.png](https://i.imgur.com/J5TOfQl.png)
+    ![VS Setup](https://i.imgur.com/J5TOfQl.png)
 
 * Set the default Python environment globally for Visual Studio specially if you have multiple Python installations. Go to menu Tools > Python > Python Environments and select e.g. Python 3.6 (64 bit) and click Make this the default environment for new projects button.
 
-    ![https://i.imgur.com/jXeCgwW.png](https://i.imgur.com/jXeCgwW.png)
+    ![Python default environment](https://i.imgur.com/jXeCgwW.png)
 
 * Add Python install folder to your PATH variable. This folder will probably be located in `C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64`.
 * [Visual Studio Tools for AI](https://visualstudio.microsoft.com/downloads/ai-tools-vs/)
@@ -55,11 +55,11 @@ Workshop material for getting familiar with deep learning concepts and how to in
     python -c "import keras; print(keras.__version__)"
     ```
 
-    ![https://i.imgur.com/pkHxC4X.png](https://i.imgur.com/pkHxC4X.png)
+    ![Verify setup](https://i.imgur.com/pkHxC4X.png)
 
 * Make sure you can create Azure VMs of size **NC24** or **NV24** , if not create a support request to increase your quota (basically increase core count to 24). It will be auto approved for those sizes.
 
-    ![https://i.imgur.com/SVUh0Ko.png](https://i.imgur.com/SVUh0Ko.png)
+    ![Azure quota](https://i.imgur.com/SVUh0Ko.png)
 
 * Clone repo `https://github.com/ylashin/deep-learning-workshop`
 

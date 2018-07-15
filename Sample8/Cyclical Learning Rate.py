@@ -1,7 +1,3 @@
-# https://github.com/bckenstler/CLR
-# One reason this approach may work well is because increasing the learning rate is an effective way of escaping saddle points. 
-# By cycling the learning rate, we're guaranteeing that such an increase will take place if we end up in a saddle point.
-
 import keras
 import pandas as pd
 import numpy as np
