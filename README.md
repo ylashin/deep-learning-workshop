@@ -6,7 +6,7 @@ Workshop material for getting familiar with deep learning concepts and how to in
 
 * Some Azure credit in the range of AUD 20 or more for provisioning a VM & Kubernetes cluster.
 * NVIDIA GPU, I tested the setup on a GTX 770 just to confirm the easy samples will work on older cards. Heavier models will be trained on Azure VMs.
-* [NVIDIA Cuda Toolkit 9.0](https://developer.nvidia.com/cuda-90-download-archive), install base Installer then all patches.
+* [NVIDIA Cuda Toolkit 9.0](https://developer.nvidia.com/cuda-90-download-archive), install base installer but use custom installation and **uncheck everything except Cuda, and under that, uncheck everything except Development and Runtime**. Install all patches as well.
 * Download [NVIDIA cuDNN 7.1](https://developer.nvidia.com/cudnn), pick a version matching Cuda Toolkit 9.0 above. Run the first 4 steps of [this installation guide](https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#installwindows). No need for the 5th step about configuring linker in Visual Studio.
 
     ![cuDNN Download](https://i.imgur.com/yqob1lK.png)
@@ -33,7 +33,7 @@ Workshop material for getting familiar with deep learning concepts and how to in
     ```
     
 * [Putty](https://www.putty.org/), as sometimes Git Bash does not work fine
-* Run the below PowerShell snippet to install needed libraries like Keras and TensorFlow (GPU enabled). Python should be available on system path variable. Some libraries are installed using specific versions as some examples we will try depend on VS tools that need those versions, more specifically ONNX which is a neural network interoperability library.
+* Run the below PowerShell snippet **as administrator** to install needed libraries like Keras and TensorFlow (GPU enabled). Python should be available on system path variable. Some libraries are installed using specific versions as some examples we will try depend on VS tools that need those versions, more specifically ONNX which is a neural network interoperability library.
 
     ```
     python -m ensurepip
@@ -57,7 +57,7 @@ Workshop material for getting familiar with deep learning concepts and how to in
 
     ![Verify setup](https://i.imgur.com/pkHxC4X.png)
 
-* Make sure you can create Azure VMs of size **NC24** or **NV24** , if not create a support request to increase your quota (basically increase core count to 24). It will be auto approved for those sizes.
+* Make sure you can create Azure VMs of size **NC24** or **NV24**. Just search for deep learning virtual machine in the templates and proceed with the wizard to create a linux. GPU enabled VMs don't exist in all regions. Give it a go in South Central US or East US 2. If you found the above VM sizes but cannot create them due to quota limits, create a support request to increase your quota (basically increase core count to 24). It will be auto approved for those sizes. BTW, once you create the VM you can delete it or shut it down. We will start with **NC6** which has a single GPU but one sample requires a multi GPU machine that's why we need to make sure we can create one with 4 GPUs.
 
     ![Azure quota](https://i.imgur.com/SVUh0Ko.png)
 
