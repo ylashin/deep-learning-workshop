@@ -13,7 +13,7 @@ namespace TheApp
         private readonly Model _model;
         private Dictionary<string, int> _word2Index;
         private Dictionary<int, string> _index2Word;
-        private const int SequenceLength = 20;
+        private const int SequenceLength = 40;
         public Form1()
         {
             InitializeComponent();
