@@ -16,5 +16,10 @@ namespace TheApp
         {
             InitializeComponent();
         }
+
+        private void btnDetectIdentity_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -57,7 +57,7 @@ Workshop material for getting familiar with deep learning concepts and how to in
 
     ![Verify setup](https://i.imgur.com/pkHxC4X.png)
 
-* Make sure you can create Azure VMs of size **NC24** or **NV24**. Just search for deep learning virtual machine in the templates and proceed with the wizard to create a linux. GPU enabled VMs don't exist in all regions. Give it a go in South Central US or East US 2. If you found the above VM sizes but cannot create them due to quota limits, create a support request to increase your quota (basically increase core count to 24). It will be auto approved for those sizes. BTW, once you create the VM you can delete it or shut it down. We will start with **NC6** which has a single GPU but one sample requires a multi GPU machine that's why we need to make sure we can create one with 4 GPUs.
+* Make sure you can create Azure VMs of size **NC24** or **NV24**. Just search for deep learning virtual machine in the templates and proceed with the wizard to create a linux VM. GPU enabled VMs don't exist in all regions. Give it a go in South Central US or East US 2. If you find the above VM sizes but cannot create them due to quota limits, create a support request to increase your quota (basically increase cores count to 24). It will be auto approved for those sizes. BTW, once you create the VM you can delete it or shut it down. We will start with **NC6** which has a single GPU but one sample requires a multi GPU machine that's why we need to make sure we can create one with 4 GPUs.
 
     ![Azure quota](https://i.imgur.com/SVUh0Ko.png)
 

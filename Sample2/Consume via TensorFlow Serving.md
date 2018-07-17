@@ -12,7 +12,7 @@ python.exe ..\Tools\ConvertToServing.py  --model=.\Sample2.h5 --output=tf-servin
 
 ## Pull docker image containing Tensorflow Serving setup and configured
 
-For mode details on how to create this image from scratch, have a look on : [Using TensorFlow Serving via Docker](https://www.tensorflow.org/serving/docker)
+For more details on how to create this image from scratch, have a look on : [Using TensorFlow Serving via Docker](https://www.tensorflow.org/serving/docker)
 
 Run the below to pull TensorFlow Serving image and confirm it runs fine:
 ```
@@ -50,7 +50,7 @@ Install nuget packages:
 * NewtonSoft.Json
 
 
-Open a Powershell from : packages\Grpc.Tools.1.12.0\tools\windows_x64 and run the following:
+Open a Powershell from `packages\Grpc.Tools.1.12.0\tools\windows_x64` and run the following:
 
 ```
 wget https://raw.githubusercontent.com/krystianity/keras-serving/master/node_server/protos/model.proto -OutFile .\model.proto
@@ -70,7 +70,7 @@ mkdir Temp
 ```
 
 
-Copy all the `.cs` files generated in Temp folder from the final statement in the above snippet and put them in a folder in `TheApp` project
+Copy all the `.cs` files generated in Temp folder from the final statement in the above snippet and put them in a new folder in `TheApp` project (you can name the new folder something like `contracts`).
 
 Compile and complete the application, mainly adding prediction button handler code:
 
