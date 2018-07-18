@@ -5,5 +5,6 @@
         public int Id { get; set; }
         public string Title { get; set; }
         public int? RatingCount { get; set; }
+        public string CardImage { get; set; }
     }
 }

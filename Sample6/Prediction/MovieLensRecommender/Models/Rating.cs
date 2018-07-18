@@ -13,6 +13,7 @@
         public int MovieId { get; set; }
         public int? Rating { get; set; }
         public string Title { get; set; }
+        public string CardImage { get; set; }
     }
 
     public class User

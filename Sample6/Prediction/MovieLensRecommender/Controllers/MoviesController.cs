@@ -49,7 +49,8 @@ namespace MovieLensRecommender.Controllers
                     {
                         MovieId = a.Id,
                         Rating = rating,
-                        Title = a.Title
+                        Title = a.Title,
+                        CardImage = a.CardImage
                     };
 
                 })

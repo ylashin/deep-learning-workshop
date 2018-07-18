@@ -23,6 +23,7 @@ namespace MovieLensRecommender
         {
             return Path.Combine(HttpRuntime.AppDomainAppPath, $"data\\movie-lens\\{fileName}");
         }
+
         static WebApiApplication()
         {
             var moviesFilePath = GetDataFilePath("movies.csv");
@@ -53,7 +54,15 @@ namespace MovieLensRecommender
                 .Select(a => new { MovieId = a.Key, RatingCount = a.Count() })
                 .ToDictionary(a => a.MovieId, a => a.RatingCount);
 
-            Movies.ForEach(a => a.RatingCount = ratingCountMap.ContainsKey(a.Id) ? ratingCountMap[a.Id] : 0);
+            var imageCardFiles = Directory
+                .GetFiles(Path.Combine(HttpRuntime.AppDomainAppPath, @"data\images"))
+                .Select(a => Path.GetFileName(a).ToLower())
+                .ToDictionary(a => a);
+
+            Movies.ForEach(a => {
+                a.RatingCount = ratingCountMap.ContainsKey(a.Id) ? ratingCountMap[a.Id] : 0;
+                a.CardImage = imageCardFiles.ContainsKey($"{a.Id}.jpg") ? imageCardFiles[$"{a.Id}.jpg"] : "nopicture.jpg";
+            });
 
             TopMovies = Movies.OrderByDescending(a => a.RatingCount).Take(1000).ToList();
             RatingLookup = Ratings.ToDictionary(a => a.UserId +"#" +a.MovieId, a => a.RatingValue);

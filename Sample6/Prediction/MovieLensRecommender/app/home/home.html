@@ -13,10 +13,10 @@
     </div>
     <div class="row">
         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 square" ng-repeat="movie in vm.ratings">
-            <div class="card mt-4" style="width:100%;height:20rem;">
-                <img class="card-img-top img-fluid" style="width:100%;height:15rem;max-width:100%;max-height:100%" ng-src="{{'data/images/' + movie.MovieId + '.jpg'}}" />
+            <div class="card mt-4" style="width:100%;height:32rem;">
+                <img class="card-img-top img-fluid" style="width:100%;height:25rem;max-width:100%;max-height:100%" ng-src="{{'data/images/' + movie.CardImage}}" />
                 <div class="card-body">
-                    {{movie.Title}}
+                    <span class="text-center h4"> {{movie.Title}}</span>
                     <div ng-if="movie.Rating > 0">
                         <rating color="#FF0000" interactive="false" value="movie.Rating" max="5"></rating>
                     </div>
