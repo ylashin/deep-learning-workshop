@@ -28,8 +28,8 @@ namespace MovieLensRecommender.Service
                 var proto1 = GetInput(userId);
                 var proto2 = GetInput(movieId);
 
-                request.Inputs.Add("input1", proto1);
-                request.Inputs.Add("input2", proto2);
+                request.Inputs.Add("userId", proto1);
+                request.Inputs.Add("movieId", proto2);
 
                 var result = client.Predict(request);
                 var response = JsonConvert.DeserializeObject<ResponseObject>(result.Outputs.ToString());
