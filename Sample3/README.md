@@ -2,6 +2,7 @@
 
 ## Steps
 
+* Explore problem and data
 * Create DeepLearning VM on azure and connect to it using Putty to verify
 * SSH into VM then :
     ```

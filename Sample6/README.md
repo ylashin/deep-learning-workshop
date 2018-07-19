@@ -1,6 +1,5 @@
 # Movies Recommender
 
-
 ## Steps:
 
 * Run the notebook in this folder locally or in Azure deep learning VM

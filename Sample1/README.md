@@ -1,5 +1,6 @@
 ## Steps
 
+* Explore data
 * Run *LinearRegression.py* to generate model for linear regression
 * Preview the network using Netron
 * Export model to TensorFlow Serving format
