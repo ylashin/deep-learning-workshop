@@ -1,5 +1,8 @@
 import keras
 import pandas as pd
+import numpy as np
+
+np.random.seed(12345)
 
 dataframe = pd.read_csv('data.csv')
 
@@ -24,6 +27,6 @@ model.compile(
     optimizer=keras.optimizers.Adam(), 
     metrics=[keras.metrics.binary_accuracy])
 
-model.fit(X, Y, epochs=100, batch_size=100, verbose=1, validation_split=0.2)
+model.fit(X, Y, epochs=100, batch_size=10, verbose=1, validation_split=0.2)
     
 model.save("Sample2.h5")

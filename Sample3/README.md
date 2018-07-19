@@ -29,7 +29,7 @@
     docker pull ylashin/tensorflow-serving
     docker run -p 7000:7000 -it ylashin/tensorflow-serving
     ```
-* In another window, copy the converted model inside the container
+* In another window at current sample root folder, copy the converted model inside the container
     ```
     docker ps
     docker cp -a ".\tf-serving\dvc" CONTAINER_NAME:/
