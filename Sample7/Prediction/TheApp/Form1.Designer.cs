@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.txtData = new System.Windows.Forms.TextBox();
             this.btnOptionA = new System.Windows.Forms.Button();
             this.btnOptionB = new System.Windows.Forms.Button();
@@ -47,6 +48,7 @@
             this.txtData.Name = "txtData";
             this.txtData.Size = new System.Drawing.Size(971, 254);
             this.txtData.TabIndex = 0;
+            this.txtData.Text = resources.GetString("txtData.Text");
             this.txtData.TextChanged += new System.EventHandler(this.txtData_TextChanged);
             // 
             // btnOptionA

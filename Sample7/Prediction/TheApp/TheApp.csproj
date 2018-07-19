@@ -78,11 +78,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ModelInferenceLibrary\ModelInferenceLibrary.csproj">
-      <Project>{a9ebab78-86a7-40de-ab99-05070346627d}</Project>
-      <Name>ModelInferenceLibrary</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

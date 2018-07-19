@@ -1,7 +1,7 @@
 ## Train language model using Recurent Neural Networks
 
 * In Azure VM, run the notebook `Predictive Text`
-* Download the model and index files `index2word.csv` & `word2index.csv`
+* Download the model and index files `index2word.csv` & `word2index.csv` to bin\debug of VS solution
 * Complete the implementation of VS solution in *Prediction* folder
 
 

@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="txtData.Text" xml:space="preserve">
+    <value>It was a dark night near the scary shore and the ships were resting as giant monsters we had to move slowly and take care of each other as there was lots of injuries the wind has been in our favour we began to scramble out of a bribe want none of your own</value>
+  </data>
 </root>

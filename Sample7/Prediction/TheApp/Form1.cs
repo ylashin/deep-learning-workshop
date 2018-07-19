@@ -13,7 +13,7 @@ namespace TheApp
         private readonly Model _model;
         private Dictionary<string, int> _word2Index;
         private Dictionary<int, string> _index2Word;
-        private const int SequenceLength = 40;
+        private const int SequenceLength = 50;
         public Form1()
         {
             InitializeComponent();
@@ -33,7 +33,7 @@ namespace TheApp
                 .ToDictionary(x => int.Parse(x[0]), x => x[1]);
         }
 
-        private string[] DataWords => txtData.Text.Split(' ');
+        private string[] DataWords => txtData.Text.Trim().Split(' ');
         private void txtData_TextChanged(object sender, EventArgs e)
         {
             if (DataWords.Length < SequenceLength || !txtData.Text.EndsWith(" "))
