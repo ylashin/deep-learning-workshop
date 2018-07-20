@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: dvc-container
-        image: ylashin/dvc23062018
+        image: ylashin/dvc20072018
         command:
         - /bin/sh
         - -c
