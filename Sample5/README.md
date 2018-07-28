@@ -10,7 +10,7 @@ That's a promising initiative for promoting deep learning model interoperability
 * Complete the VS solution by adding a model inference library using the above ONNX model and then complete the prediction part
 
 
-## Bitfalls
+## Pitfalls
 * Flattened response data parsing
 * Index swap done by trial and error
 * x & y of predicted bounding box are for the center not top left
