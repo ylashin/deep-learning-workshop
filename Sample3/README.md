@@ -65,13 +65,16 @@
 
     az account set --subscription "Visual Studio Professional with MSDN"
 
-    az group create --name Serving --location westus
+    az group create --name Serving --location westeurope
 
-    az aks create --resource-group Serving --name ServingK8sCluster --generate-ssh-keys --node-count 3
+    az aks create --resource-group Serving --name ServingK8sCluster --generate-ssh-keys --node-count 2 --node-vm-size Standard_D2_v2
 
     az aks get-credentials --resource-group Serving --name ServingK8sCluster
 
     kubectl get nodes
+
+    # If the above command fails, there could be an old K8s config file in user home folder
+    # You can delete it using the following command but adjust user name : rm -rf /home/yousry/.kube
 
     wget https://raw.githubusercontent.com/ylashin/deep-learning-workshop/master/Sample3/dvc.yaml
 
