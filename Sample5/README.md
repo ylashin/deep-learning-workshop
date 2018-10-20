@@ -17,7 +17,7 @@ That's a promising initiative for promoting deep learning model interoperability
 
 ## References and resources
 
-* [https://medium.com/@jonathan_hui/real-time-object-detection-with-yolo-yolov2-28b1b93e2088](Real-time Object Detection with YOLO, YOLOv2 and now YOLOv3)
+* [https://medium.com/@jonathan_hui/real-time-object-detection-with-yolo-yolov2-28b1b93e2088] (Realtime Object Detection with YOLO, YOLOv2 and now YOLOv3)
 * [Object detection video on SkyFall](https://www.youtube.com/watch?v=VOC3huqHrss)
 * [YOLO v3 video](https://www.youtube.com/watch?v=MPU2HistivI)
 * [YOLO on ONNX model zoo](https://github.com/onnx/models/tree/master/tiny_yolov2)
